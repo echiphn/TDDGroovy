@@ -1,4 +1,4 @@
-package org.groovy;
+package groovy.org.basic;
 
 import static org.junit.Assert.*
 
