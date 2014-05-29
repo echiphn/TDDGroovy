@@ -1,8 +1,8 @@
-package groovy.org.groovy;
+package groovy.org.basic;
 
 import static org.junit.Assert.*
 
-import org.junit.Ignore;
+import org.codehaus.groovy.runtime.GStringImpl
 import org.junit.Test
 
 class StringTest {
@@ -10,6 +10,10 @@ class StringTest {
 	@Test
 	public void testStringEvaluate() {
 		def age=25;
-		assertEquals("My age is 25","My age is ${age}");
+		def expectedString = "My age is 25"
+		def actualObject = "My age is ${age}"
+		assertTrue(actualObject instanceof GStringImpl);
+		assertFalse(expectedString.equals(actualObject));
+		assertEquals(expectedString,actualObject.toString());
 	}
 }
