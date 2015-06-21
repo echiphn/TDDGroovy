@@ -1,5 +1,5 @@
 #!/usr/bin/groovy
-package groovy.org.basic
+package org.groovy.basic
 
 /**
  * Created by cle on 05/06/15.

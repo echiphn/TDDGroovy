@@ -1,4 +1,4 @@
-package groovy.org.basic
+package org.groovy.basic
 
 import org.junit.Test
 
@@ -7,7 +7,7 @@ import static junit.framework.Assert.assertEquals
 /**
  * Created by cle on 04/06/15.
  */
-class OptionalDataDeclarationTest {
+class OptionalDataTypeDeclarationTest {
 
     @Test
     public void testDataTypeDeclaration() {
