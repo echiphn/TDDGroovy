@@ -69,4 +69,12 @@ class ListShortcutTest {
         def newLanguages=languages.collect {it +=" programming language"}
         newLanguages.each {assertTrue(it.contains("programming language"))}
     }
+    @Test
+    public void testLeftShift(){
+        def list=[] as List
+        for(int i=0;i<3;i++){
+            list << i
+        }
+        assertEquals(list,[0,1,2])
+    }
 }
