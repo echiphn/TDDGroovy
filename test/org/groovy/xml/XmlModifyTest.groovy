@@ -27,4 +27,19 @@ class XmlModifyTest {
         def copiedBook = new XmlParser().parse(copiedPath.toFile())
         assertEquals("Modified Groovy in Action", copiedBook.book[0].title[0].value()[0])
     }
+
+    @Test
+    public void testDeleteNodeXml() {
+        def bookPath = Paths.get(this.getClass().getResource("/resources/xml/books2modify.xml").toURI())
+        def copiedPath = Paths.get(bookPath.getParent().toAbsolutePath().toString() + '/books2deleteNode_copied.xml')
+        Files.copy(bookPath,copiedPath,StandardCopyOption.REPLACE_EXISTING)
+
+        def origFile = bookPath.toFile()
+        def books = new XmlParser().parse(origFile)
+        assertEquals("Groovy in Action", books.book[0].title[0].value()[0])
+        books.book[0].remove(books.book[0].title[0])
+        copiedPath.toFile().withWriter { writer -> new XmlUtil().serialize(books, writer) }
+        def copiedBook = new XmlParser().parse(copiedPath.toFile())
+        assertEquals(null, copiedBook.book[0].title[0])
+    }
 }
