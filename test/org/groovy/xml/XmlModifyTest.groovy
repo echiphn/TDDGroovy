@@ -17,7 +17,7 @@ class XmlModifyTest {
     public void testModifyXml() {
         def bookPath = Paths.get(this.getClass().getResource("/resources/xml/books2modify.xml").toURI())
         def copiedPath = Paths.get(bookPath.getParent().toAbsolutePath().toString() + '/books2modify_copied.xml')
-        Files.copy(bookPath,copiedPath,StandardCopyOption.REPLACE_EXISTING)
+        Files.copy(bookPath, copiedPath, StandardCopyOption.REPLACE_EXISTING)
 
         def origFile = bookPath.toFile()
         def books = new XmlParser().parse(origFile)
@@ -32,7 +32,7 @@ class XmlModifyTest {
     public void testDeleteNodeXml() {
         def bookPath = Paths.get(this.getClass().getResource("/resources/xml/books2modify.xml").toURI())
         def copiedPath = Paths.get(bookPath.getParent().toAbsolutePath().toString() + '/books2deleteNode_copied.xml')
-        Files.copy(bookPath,copiedPath,StandardCopyOption.REPLACE_EXISTING)
+        Files.copy(bookPath, copiedPath, StandardCopyOption.REPLACE_EXISTING)
 
         def origFile = bookPath.toFile()
         def books = new XmlParser().parse(origFile)
