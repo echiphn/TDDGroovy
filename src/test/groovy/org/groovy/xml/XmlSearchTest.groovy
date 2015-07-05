@@ -8,7 +8,7 @@ import java.nio.file.Paths
  * Created by cle on 04/07/15.
  */
 class XmlSearchTest {
-    static final XML_FILE = Paths.get(this.class.getResource("/resources/xml/xml2search.xml").toURI()).toFile()
+    static final XML_FILE = Paths.get(this.class.getResource("/xml/xml2search.xml").toURI()).toFile()
 
     /**
      * Look for any node with a tag name equals 'book' having an available with a value of '5'.

@@ -15,7 +15,7 @@ import static junit.framework.Assert.assertTrue
 class XmlReaderTest {
     @Test
     public void testReadBooks_slurper() {
-        def bookPath = Paths.get(this.getClass().getResource("/resources/xml/books.xml").toURI())
+        def bookPath = Paths.get(this.getClass().getResource("/xml/books.xml").toURI())
         def bookDoc = new XmlSlurper().parse(bookPath.toFile())
         assertTrue(bookDoc instanceof GPathResult)
         assertEquals("Groovy in Action", bookDoc.book[0].title.text())
@@ -27,7 +27,7 @@ class XmlReaderTest {
 
     @Test
     public void testReadBooks_xmlparser() {
-        def bookPath = Paths.get(this.getClass().getResource("/resources/xml/books.xml").toURI())
+        def bookPath = Paths.get(this.getClass().getResource("/xml/books.xml").toURI())
         def bookDoc = new XmlParser().parse(bookPath.toFile())
         assertTrue(bookDoc instanceof Node)
         assertEquals("Groovy in Action", bookDoc.book[0].title[0].value()[0])

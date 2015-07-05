@@ -1,4 +1,4 @@
-package org.groovy.basic
+package script
 
 /**
  * Created by cle on 05/07/15.

@@ -1,9 +1,13 @@
 package org.groovy.basic
 
+import org.junit.Test
+
 class HelloWorldTest {
 	String name;
 	String note;
-	public static void main(String[] args) {
+
+	@Test
+	public void testPrintout() {
 
 		def todos = [
 			new HelloWorldTest(name:"1", note:"one"),

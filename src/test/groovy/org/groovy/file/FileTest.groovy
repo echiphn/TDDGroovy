@@ -15,7 +15,7 @@ class FileTest {
 
     @Test
     public void testReadFile() {
-        Path path = Paths.get(this.getClass().getResource("/resources/testfile.txt").toURI())
+        Path path = Paths.get(this.getClass().getResource("/testfile.txt").toURI())
         def line
         path.toFile().withReader { line = it.readLine() }
         assertEquals("first content", line)
@@ -23,7 +23,7 @@ class FileTest {
 
     @Test
     public void testReadFileToString() {
-        Path path = Paths.get(this.getClass().getResource("/resources/testfile.txt").toURI())
+        Path path = Paths.get(this.getClass().getResource("/testfile.txt").toURI())
         assertEquals("first content", path.toFile().text)
     }
     /*
@@ -31,7 +31,7 @@ class FileTest {
      */
     @Test
     public void testReadlineWithNumber(){
-        Path path=Paths.get(this.class.getResource("/resources/testfile2").toURI())
+        Path path=Paths.get(this.class.getResource("/testfile2").toURI())
         path.toFile().eachLine { line,numberOfLine ->
             println "In the line $numberOfLine: $line"
         }

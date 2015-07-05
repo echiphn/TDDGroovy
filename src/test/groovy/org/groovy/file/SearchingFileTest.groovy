@@ -17,7 +17,7 @@ class SearchingFileTest {
         def bind = new Binding()
         bind.setProperty('dir', '/home/cle/work/workspace/TDDGroovy')
         def shell = new GroovyShell(bind)
-        def result = shell.evaluate(this.class.getResource('/org/groovy/file/SearchingGroovyFiles.groovy').text) as List
+        def result = shell.evaluate(new File("src/main/groovy/org/groovy/file/SearchingGroovyFiles.groovy").text) as List
         assert result != null
         assert result.contains(this.class.simpleName + '.groovy') == true
         assert result.contains('SearchingGroovyFiles.groovy') == true
@@ -27,7 +27,7 @@ class SearchingFileTest {
     @Test
     public void testEachfile() {
         def testfiles=[]
-        Path path = Paths.get(this.class.getResource("/resources").toURI())
+        Path path = Paths.get(this.class.getResource("/").toURI())
         def rootTestResource = path.toFile()
         assert rootTestResource.exists() == true
         rootTestResource.eachFile(FileType.FILES){ file -> testfiles << file.getName()}

@@ -15,7 +15,7 @@ import static junit.framework.Assert.assertEquals
 class XmlModifyTest {
     @Test
     public void testModifyXml() {
-        def bookPath = Paths.get(this.getClass().getResource("/resources/xml/books2modify.xml").toURI())
+        def bookPath = Paths.get(this.getClass().getResource("/xml/books2modify.xml").toURI())
         def copiedPath = Paths.get(bookPath.getParent().toAbsolutePath().toString() + '/books2modify_copied.xml')
         Files.copy(bookPath, copiedPath, StandardCopyOption.REPLACE_EXISTING)
 
@@ -30,7 +30,7 @@ class XmlModifyTest {
 
     @Test
     public void testDeleteNodeXml() {
-        def bookPath = Paths.get(this.getClass().getResource("/resources/xml/books2modify.xml").toURI())
+        def bookPath = Paths.get(this.getClass().getResource("/xml/books2modify.xml").toURI())
         def copiedPath = Paths.get(bookPath.getParent().toAbsolutePath().toString() + '/books2deleteNode_copied.xml')
         Files.copy(bookPath, copiedPath, StandardCopyOption.REPLACE_EXISTING)
 
