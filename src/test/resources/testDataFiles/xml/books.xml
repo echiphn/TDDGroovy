@@ -1,0 +1,16 @@
+<books>
+    <book isbn="DEMU9474739">
+        <title>Groovy in Action</title>
+        <author>Dierk Koenig</author>
+        <author>Paul King</author>
+    </book>
+    <book isbn="DEMU9474734">
+        <title>Grails in Action</title>
+        <author>Glen Smith</author>
+        <author>Peter Ledbrook</author>
+    </book>
+    <book isbn="DEMU9474342">
+        <title>Making Java Groovy 11 </title>
+        <author>Ken Kousen</author>
+    </book>
+</books>

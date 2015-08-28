@@ -27,8 +27,9 @@ class SearchingFileTest {
     @Test
     public void testEachfile() {
         def testfiles=[]
-        Path path = Paths.get(this.class.getResource("/").toURI())
+        Path path = Paths.get(this.class.getResource("/testDataFiles").toURI())
         def rootTestResource = path.toFile()
+        println path.toAbsolutePath().toString()
         assert rootTestResource.exists() == true
         rootTestResource.eachFile(FileType.FILES){ file -> testfiles << file.getName()}
         assert testfiles.isEmpty() == false
