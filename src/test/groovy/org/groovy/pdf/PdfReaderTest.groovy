@@ -1,9 +1,9 @@
 package org.groovy.pdf
 
-import com.lowagie.text.pdf.PdfReader
+import com.itextpdf.text.pdf.PdfReader
 import org.junit.Test
 
-import static junit.framework.Assert.assertEquals
+import static org.junit.Assert.assertEquals
 
 /**
  * Created by cle on 14/07/15.
