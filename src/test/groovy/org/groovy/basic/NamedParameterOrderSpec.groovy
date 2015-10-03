@@ -2,7 +2,7 @@ package org.groovy.basic
 
 import spock.lang.Specification;
 
-class NamedParameterOrderTest extends Specification{
+class NamedParameterOrderSpec extends Specification{
 	def namedParameter(Map params){
 		assert params.a==1
 		assert params.b==2
