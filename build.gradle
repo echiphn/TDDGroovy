@@ -1,12 +1,13 @@
+description = """A project to experiment diverse features of groovy language"""
+group = 'TDDGroovy'
+version = '0.0.1-SNAPSHOT'
+
 apply plugin: 'groovy'
 apply plugin: 'maven'
 apply plugin: 'eclipse'
 
-group = 'TDDGroovy'
-version = '0.0.1-SNAPSHOT'
-
-description = """A project to experiment diverse features of groovy language"""
-
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 repositories {
      mavenCentral()
