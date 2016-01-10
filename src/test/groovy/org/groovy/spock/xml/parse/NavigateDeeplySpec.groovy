@@ -1,4 +1,4 @@
-package org.groovy.spock.xml
+package org.groovy.spock.xml.parse
 
 import groovy.util.slurpersupport.NodeChild
 import groovy.util.slurpersupport.NodeChildren
