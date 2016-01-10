@@ -1,4 +1,4 @@
-package org.groovy.spock.xml.writing
+package org.groovy.xml.writing
 
 import groovy.xml.MarkupBuilder
 

@@ -1,4 +1,4 @@
-package org.groovy.spock.xml.parse
+package org.groovy.xml.parse
 import groovy.util.slurpersupport.Attributes;
 import spock.lang.Shared;
 import spock.lang.Specification;

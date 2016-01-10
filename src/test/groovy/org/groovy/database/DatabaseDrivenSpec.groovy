@@ -1,4 +1,4 @@
-package org.groovy.spock
+package org.groovy.database
 
 /*
  * Copyright 2009 the original author or authors.
