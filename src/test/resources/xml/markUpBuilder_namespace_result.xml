@@ -1,0 +1,5 @@
+<person id='99' xmlns:product="urn:somecompany:products"
+	xmlns:vendor="urn:somecompany:vendors">
+	<firstname>Jane</firstname>
+	<lastname>Doe</lastname>
+</person>
