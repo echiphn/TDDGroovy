@@ -4,7 +4,7 @@ import groovy.io.FileType
 
 
 def processRecursive(File folder,String prefix,String separator,String secondSeparator){
-	def supportedVideoTypes=["mp4", "avi", "mkv"]
+	def supportedVideoTypes=["mp4", "avi", "mkv","m4v","mov"]
 	def subFiles=[]
 	folder.eachFile(FileType.FILES) {file-> subFiles<<file }
 

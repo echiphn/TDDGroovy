@@ -3,7 +3,7 @@
 //https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows
 
 
-def cli = new CliBuilder(usage:'showdate.groovy -[dh] [path to folder]')
+def cli = new CliBuilder(usage:'VideoNameAdapting -[dh] [path to folder]')
 // Create the list of options.
 cli.with {
 	h longOpt: 'help', 'Show usage information'
