@@ -6,24 +6,26 @@ apply plugin: 'groovy'
 apply plugin: 'maven'
 apply plugin: 'eclipse'
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
-repositories {
-     mavenCentral()
-}
+repositories { mavenCentral() }
 dependencies {
-    compile group: 'org.codehaus.groovy', name: 'groovy-all', version:'2.4.5'
-    compile group: 'com.h2database', name: 'h2', version:'1.4.187'
-    compile group:'com.itextpdf',name:'itextpdf',version:'5.0.6'
+	compile group: 'org.codehaus.groovy', name: 'groovy-all', version:'2.4.5'
+	compile group: 'com.h2database', name: 'h2', version:'1.4.187'
+	compile group:'com.itextpdf',name:'itextpdf',version:'5.0.6'
 	
-    testCompile group: 'junit', name: 'junit', version:'4.12'
-    testCompile group: 'org.spockframework', name: 'spock-core', version:'1.0-groovy-2.4'
+	testCompile group: 'junit', name: 'junit', version:'4.12'
+	testCompile group: 'org.spockframework', name: 'spock-core', version:'1.0-groovy-2.4'
+	testCompile group: 'org.xmlunit', name: 'xmlunit-core', version:'2.0.0-alpha-03'
 }
 
 test {
 	afterTest { desc, result ->
 		def executionTime=result.endTime-result.startTime
 		println "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType} in ${executionTime} ms"
+	}
+	testLogging{
+		showStandardStreams = true
 	}
 }
